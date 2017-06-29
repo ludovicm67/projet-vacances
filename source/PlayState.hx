@@ -6,6 +6,11 @@ class PlayState extends FlxState
 {
 	override public function create():Void
 	{
+		// Loading the map and adding layers
+		var map = new MapLoader(AssetPaths.map__json);
+		for (layer in map.layers)
+			add(layer);
+			
 		super.create();
 	}
 
