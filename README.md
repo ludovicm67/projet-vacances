@@ -2,6 +2,13 @@
 
 This is a small colaborative project for hollidays and to try a new langage and explore game mecanics through a small plateformer game.
 
+# Goal of each class
+## MapLoader
+Class that will load a map from a JSON file and the corresponding tileset.
+
+## Reg
+Static class which contains only static functions and static variables, used for global variables.
+
 # Compilation
 
 In order to compile the project you have to install a few things :
