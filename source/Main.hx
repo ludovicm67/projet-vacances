@@ -5,9 +5,11 @@ import openfl.display.Sprite;
 
 class Main extends Sprite
 {
+	public var zoom:Int = 1;
+
 	public function new()
 	{
 		super();
-		addChild(new FlxGame(0, 0, PlayState));
+		addChild(new FlxGame(Std.int(1280/zoom), Std.int(720/zoom), PlayState));
 	}
 }

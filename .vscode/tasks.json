@@ -13,7 +13,6 @@
 			"taskName": "flash debug",
 			"suppressTaskName": true,
 			"args": ["test", "flash", "-debug", "-Dfdb"],
-			"isBuildCommand": true,
 			"problemMatcher": "$haxe"
 		},
 		{
@@ -44,6 +43,7 @@
 			"taskName": "neko debug",
 			"suppressTaskName": true,
 			"args": ["test", "neko", "-debug"],
+			"isBuildCommand": true,
 			"problemMatcher": "$haxe"
 		},
 		{
