@@ -1,6 +1,7 @@
 package;
 
 import flixel.group.FlxGroup;
+import flixel.FlxObject;
 import objects.Door;
 
 class Reg {
@@ -19,5 +20,12 @@ class Reg {
     public static function toScale(variable:Float):Float
     {
         return pixelsPerMeter * variable;
+    }
+
+    public static function distance(obj1:FlxObject, obj2:FlxObject)
+    {
+        var mid1 = obj1.getMidpoint();
+        var mid2 = obj2.getMidpoint();
+        return mid1.distanceTo(mid2);
     }
 }

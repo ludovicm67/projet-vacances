@@ -39,6 +39,9 @@ class Player extends FlxSprite
         movement();
         jump(elapsed);
 
+        if (FlxG.keys.anyPressed(["P"]))
+            trace(getPosition());
+
         super.update(elapsed);
     }
 
