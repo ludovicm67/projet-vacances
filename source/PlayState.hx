@@ -29,5 +29,7 @@ class PlayState extends FlxState
 
 		FlxG.collide(player, map.collision_layer);
 		FlxG.collide(player, Reg.doors);
+
+		player.isOnLadder = player.overlaps(Reg.ladders);
 	}
 }

@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="left-up" width="20" height="20" tilewidth="64" tileheight="64" nextobjectid="2">
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="left-up" width="20" height="20" tilewidth="64" tileheight="64" nextobjectid="14">
  <tileset firstgid="1" name="tileset" tilewidth="64" tileheight="64" tilecount="36" columns="6">
   <image source="../images/tileset.png" width="384" height="384"/>
+  <tile id="4">
+   <properties>
+    <property name="animation" value="grass.png"/>
+    <property name="framerate" value="4"/>
+    <property name="frames" value="[0, 1, 2, 3, 4, 5]"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="animation" value="torch.png"/>
+    <property name="framerate" value="4"/>
+    <property name="frames" value="[0, 1, 2, 3]"/>
+   </properties>
+  </tile>
  </tileset>
  <layer name="background" width="20" height="20">
   <data encoding="csv">
@@ -30,8 +44,8 @@
  <layer name="foreground" width="20" height="20">
   <data encoding="csv">
 0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,
-0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,
+0,0,0,0,0,0,0,0,0,0,2,0,0,0,9,0,0,0,0,0,
+0,0,0,2,0,0,0,0,0,0,0,0,0,9,0,0,0,0,2,0,
 5,5,5,0,8,5,5,0,0,0,8,5,9,0,0,5,0,0,5,5,
 0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,
@@ -52,13 +66,18 @@
 </data>
  </layer>
  <objectgroup name="objects">
-  <object id="1" name="Door" type="door" x="448" y="192" width="64" height="64"/>
+  <object id="6" type="ladder" gid="12" x="512" y="576" width="64" height="64"/>
+  <object id="7" type="ladder" gid="12" x="512" y="512" width="64" height="64"/>
+  <object id="10" type="ladder" gid="12" x="512" y="448" width="64" height="64"/>
+  <object id="11" type="ladder" gid="12" x="512" y="384" width="64" height="64"/>
+  <object id="12" name="Ladder" type="ladder" gid="12" x="512" y="320" width="64" height="64"/>
+  <object id="13" name="Door" type="door" gid="13" x="448" y="256" width="64" height="64"/>
  </objectgroup>
  <layer name="collision" width="20" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,
 3,3,3,3,3,3,3,3,0,3,3,3,3,3,3,3,3,3,3,3,
 0,0,0,0,0,0,0,3,0,3,0,0,0,0,0,0,0,0,0,0,
