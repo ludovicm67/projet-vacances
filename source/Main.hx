@@ -10,6 +10,7 @@ class Main extends Sprite
 	public function new()
 	{
 		super();
+		Reg.init();
 		addChild(new FlxGame(Std.int(1280/zoom), Std.int(720/zoom), PlayState));
 	}
 }
